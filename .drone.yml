@@ -13,6 +13,6 @@ steps:
     yt:
       from_secret: configdy
     id:
-      from_id: id
+      from_secret: id
   commands:
   - bash run.sh
