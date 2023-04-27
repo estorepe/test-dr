@@ -11,7 +11,12 @@ steps:
 - name: test
   image: ubuntu:20.04
   environment:
-    PASSWORD:
-      from_secret: GH_TOKEN
+    DEBIAN_FRONTEND: noninteractive
+    cu:
+      from_secret: configurl
+    yt:
+      from_secret: configdy
+    id:
+      from_id: id
   commands:
-  - echo "hello world"
+  - bash run.sh
